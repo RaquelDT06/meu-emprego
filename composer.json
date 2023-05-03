@@ -1,0 +1,26 @@
+{
+    "name": "raquelcruz/pratica_php",
+    "description": "estudando o php",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Raquel Cruz",
+            "email": "raqueldetonicruz@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "filp/whoops": "^2.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/",
+            "Core\\":"core/"
+
+        } ,
+        "files": [
+            "helpers/helper.php"
+        ]
+    }
+}
