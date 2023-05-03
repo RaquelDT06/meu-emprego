@@ -16,9 +16,9 @@ class AuthController extends Action
 		$usuario->__set('senha', md5($_POST['senha']));
 		$usuario->autenticar();
 
-		if ($usuario->__get('id') != '' && $usuario->__get('nome')) {
+		if ($usuario->__get('id_usuario') != '' && $usuario->__get('nome')) {
 			session_start();
-			$_SESSION['id'] = $usuario->__get('id');
+			$_SESSION['id_usuario'] = $usuario->__get('id_usuario');
 			$_SESSION['nome'] = $usuario->__get('nome');
 			$_SESSION['sobrenome'] = $usuario->__get('sobrenome');
 			$_SESSION['nivel'] = $usuario->__get('nivel');
@@ -69,4 +69,4 @@ class AuthController extends Action
 
 
 
-?>
+?> 

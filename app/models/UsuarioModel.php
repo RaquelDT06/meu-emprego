@@ -6,7 +6,7 @@ use Core\Model\Model;
 use PDO;
 
 class UsuarioModel extends Model {
-    private $id;
+    private $id_usuario;
     private $nome;
     private $sobrenome;
     private $mail;
@@ -36,24 +36,29 @@ class UsuarioModel extends Model {
         $stmt->bindValue(":email", $this->__get("email"));
         $stmt->bindValue(":senha", $this->__get("senha"));
         $stmt->execute();
+        
 
+        if($stmt->rowCount()){
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        dd($usuario);
-
-        if ($usuario['id_usuario'] != '' && $usuario['nome']){
-            $this->__set('id_usuario', $usuario['id_usuario']);
-            $this->__set('nome', $usuario['nome']);
-            $this->__set('sobrenome', $usuario['sobrenome']);
-            $this->__set('nivel', $usuario['nivel']);
-            $this->__set('email', $usuario['email']);
-            $this->__set('ativo', $usuario['ativo']);
-            $this->__set('imagem', $usuario['imagem']);
+            // dd($usuario);
     
+            if ($usuario['id_usuario'] != '' && $usuario['nome']){
+                $this->__set('id_usuario', $usuario['id_usuario']);
+                $this->__set('nome', $usuario['nome']);
+                $this->__set('sobrenome', $usuario['sobrenome']);
+                $this->__set('nivel', $usuario['nivel']);
+                $this->__set('email', $usuario['email']);
+                $this->__set('ativo', $usuario['ativo']);
+                $this->__set('imagem', $usuario['imagem']);
+        
+    
+            
+        }
+        }
 
         return $this;
-    }
+        
 }
 }
 

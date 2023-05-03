@@ -42,6 +42,22 @@ class Route extends Bootstrap
             'action' => 'autenticar'
         );
 
+        $routes['sair'] = array(
+            'route' => '/sair',
+            'controller' => 'AuthController',
+            'action' => 'sair'
+        );
+
+
+        //admcontroller rotas
+
+        $routes['adm'] = array(
+            'route' => '/adm',
+            'controller' => 'AdminController',
+            'action' => 'index'
+
+        );
+
 
 
 
