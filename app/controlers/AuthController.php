@@ -38,8 +38,8 @@ class AuthController extends Action
 			session_start();
 		}
 
-		if (!isset($_SESSION['id']) || $_SESSION['id'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
-			header('Location: /login?erro=403');
+		if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
+			header('Location: /login?error=403');
 		}
 	}
 
@@ -51,7 +51,7 @@ class AuthController extends Action
 
 		$logado = true;
 
-		if (!isset($_SESSION['id']) || $_SESSION['id'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
+		if (!isset($_SESSION['id_usuario']) || $_SESSION['id_usuario'] == '' || !isset($_SESSION['nome']) || $_SESSION['nome'] == '') {
 			$logado = false;
 		}
 

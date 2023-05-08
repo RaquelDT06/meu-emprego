@@ -21,6 +21,7 @@
   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -76,14 +77,14 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="bi bi-basket3-fill"></i>
-          <span>Produtos</span>
+        <i class="bi bi-box-arrow-in-right"></i>
+          <span>usuários</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Produto:</h6>
-            <a class="collapse-item" href="/produtos_novo">Cadastrar</a>
-            <a class="collapse-item" href="/produtos">Listar</a>
+            <h6 class="collapse-header">Usuários:</h6>
+            <a class="collapse-item" href="/usuario_novo">Cadastrar</a>
+            <a class="collapse-item" href="/usuario">Listar</a>
           </div>
         </div>
       </li>
@@ -272,7 +273,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="/sair">Logout</a>
         </div>
       </div>
     </div>

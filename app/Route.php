@@ -52,11 +52,26 @@ class Route extends Bootstrap
         //admcontroller rotas
 
         $routes['adm'] = array(
-            'route' => '/adm',
+            'route' => '/admin',
             'controller' => 'AdminController',
             'action' => 'index'
 
         );
+
+        $routes['usuario_novo'] = array(
+            'route' => '/usuario_novo',
+            'controller' => 'UsuarioController',
+            'action' => 'cadastrar'
+
+        );
+
+        $routes['salvar_usuario'] = array(
+            'route' => '/salvar_usuario',
+            'controller' => 'UsuarioController',
+            'action' => 'salvar_usuario'
+
+        );
+
 
 
 
